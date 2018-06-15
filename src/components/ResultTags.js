@@ -1,9 +1,9 @@
 import React from 'react';
-let resultNumber = 15;
-export default function() {
+
+export default function(props) {
   return (
     <div className="result-tags">
-      <p>Showing {resultNumber} results by</p>
+      <p>Showing {props.totalResults} results by</p>
       <div className="result-item-tags">tags</div>
     </div>
   );

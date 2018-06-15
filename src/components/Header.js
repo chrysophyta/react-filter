@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
-const API_KEY = 'bdbf694617cf4656ba54e8f095033e16';
-const URL = `https://newsapi.org/v2/everything?apiKey=${API_KEY}&q=`;
 
 export default class Header extends Component {
   constructor(props) {
@@ -16,10 +12,7 @@ export default class Header extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    const sendData = this.props.data;
-    axios.get(URL + this.state.term).then(function(response) {
-      sendData(response);
-    });
+    this.props.sendRequest(this.state.term);
   };
   render() {
     return (

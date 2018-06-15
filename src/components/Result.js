@@ -8,15 +8,14 @@ export default class Result extends Component {
   }
 
   render() {
-    if (this.props.data) {
-      const { articles, totalResults } = this.props.data;
+    if (this.props.results) {
+      const { articles, totalResults } = this.props.results.data;
       return (
         <div className="result">
-          <ResultTags />
-          <ResultItem />
-          <ResultItem />
-          <ResultItem />
-          <ResultItem />
+          <ResultTags totalResults={totalResults} />
+          {articles.map((article, index) => {
+            return <ResultItem article={article} key={index} />;
+          })}
         </div>
       );
     } else {
