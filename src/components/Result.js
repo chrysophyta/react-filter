@@ -6,15 +6,21 @@ export default class Result extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
-    return (
-      <div className="result">
-        <ResultTags />
-        <ResultItem />
-        <ResultItem />
-        <ResultItem />
-        <ResultItem />
-      </div>
-    );
+    if (this.props.data) {
+      const { articles, totalResults } = this.props.data;
+      return (
+        <div className="result">
+          <ResultTags />
+          <ResultItem />
+          <ResultItem />
+          <ResultItem />
+          <ResultItem />
+        </div>
+      );
+    } else {
+      return <div className="result">Search to get results!</div>;
+    }
   }
 }

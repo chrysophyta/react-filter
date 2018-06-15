@@ -4,12 +4,22 @@ import Filter from './Filter';
 import Result from './Result';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null
+    };
+  }
+  getResult = response => {
+    console.log(response);
+  };
   render() {
+    const result = this.state.data;
     return (
       <div className="App">
-        <Header />
+        <Header data={this.getResult} />
         <Filter />
-        <Result />
+        <Result results={result} />
       </div>
     );
   }
