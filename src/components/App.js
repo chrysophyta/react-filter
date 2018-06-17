@@ -4,7 +4,7 @@ import Filter from './Filter';
 import Result from './Result';
 import axios from 'axios';
 
-const API_KEY = 'bdbf694617cf4656ba54e8f095033e16';
+const API_KEY = '068472163ddc4b498c114bab72b11a19';
 const URL = `https://newsapi.org/v2/everything?apiKey=${API_KEY}&q=`;
 
 class App extends Component {

@@ -15,7 +15,6 @@ export default class ResultItem extends Component {
           <p className="result-item-title">{article.title}</p>
           <p className="result-item-desc">{article.description}</p>
           <div className="result-item-tags">{article.source.name}</div>
-          <p className="result-item-location">►location</p>
           <p className="result-item-time">{article.publishedAt}</p>
         </div>
       </div>

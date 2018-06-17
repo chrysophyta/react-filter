@@ -236,9 +236,11 @@ input[type='checkbox'] {
     display: flex;
     flex-grow: 1;
     max-width: none;
+    width: 95%;
   }
   .result-item-thumbnail {
-    height: 100%;
-    width: auto;
+    /* height: 100%; */
+    width: 30%;
+    height: auto;
   }
 }
