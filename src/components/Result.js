@@ -6,9 +6,10 @@ export default class Result extends Component {
   render() {
     if (this.props.results) {
       const { articles, totalResults } = this.props.results.data;
+      const { tags } = this.props;
       return (
         <div className="result">
-          <ResultTags totalResults={totalResults} />
+          <ResultTags totalResults={totalResults} tags={tags} />
           {articles.map((article, index) => {
             return <ResultItem article={article} key={index} />;
           })}

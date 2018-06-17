@@ -42,7 +42,7 @@ class App extends Component {
       <div className="App">
         <Header sendRequest={this.makeRequest} />
         <Filter handleFilter={this.getFilter} />
-        <Result results={result} />
+        <Result results={result} tags={this.state.filter} />
       </div>
     );
   }
