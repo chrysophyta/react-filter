@@ -158,8 +158,6 @@ input[type='checkbox'] {
     color: white;
   }
   .filter {
-    /* margin-right: 10px; */
-    /* width: calc(40% - 10px); */
     width: 250px;
     float: left;
   }

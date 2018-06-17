@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class FilterItem extends Component {
-  constructor(props) {
-    super(props);
-  }
   static propTypes = {
     options: PropTypes.array.isRequired
   };
@@ -16,7 +13,7 @@ export default class FilterItem extends Component {
     this.props.handleChange(id, e);
   };
   render() {
-    const { id, title, type, options, handleChange } = this.props;
+    const { id, title, type, options } = this.props;
     const selectInput = (
       <select onChange={this.test}>
         {options.map((option, index) => {
@@ -28,15 +25,13 @@ export default class FilterItem extends Component {
         })}
       </select>
     );
-    const datetimeInput = (
-      <input id="datetime" type="datetime-local" onChange={this.test} />
-    );
+    const dateInput = <input type="date" onChange={this.test} />;
     return (
       <form className="filter-item">
         <p className="filter-item-title">{title}</p>
         <label htmlFor={id}>+</label>
         <input id={id} type="checkbox" className="filter-item-toggle" />
-        {type === 'select' ? selectInput : datetimeInput}
+        {type === 'select' ? selectInput : dateInput}
       </form>
     );
   }

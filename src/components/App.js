@@ -27,11 +27,9 @@ class App extends Component {
     Object.keys(this.state.filter).map(filterItem => {
       queryString += `&${filterItem}=${this.state.filter[filterItem]}`;
     });
-    console.log(queryString);
     return queryString;
   };
   getFilter = (id, value) => {
-    // console.log(id, value);
     const newFilterObject = { ...this.state.filter };
     newFilterObject[id] = value;
     this.setState({ filter: newFilterObject });

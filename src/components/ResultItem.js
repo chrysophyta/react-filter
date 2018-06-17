@@ -6,7 +6,11 @@ export default class ResultItem extends Component {
     const thumbnail = article.urlToImage || 'http://placekitten.com/200/300';
     return (
       <div className="result-item">
-        <img className="result-item-thumbnail" src={thumbnail} />
+        <img
+          className="result-item-thumbnail"
+          src={thumbnail}
+          alt={article.description}
+        />
         <div className="result-item-info">
           <p className="result-item-title">{article.title}</p>
           <p className="result-item-desc">{article.description}</p>

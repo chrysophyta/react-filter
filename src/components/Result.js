@@ -3,10 +3,6 @@ import ResultItem from './ResultItem';
 import ResultTags from './ResultTags';
 
 export default class Result extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     if (this.props.results) {
       const { articles, totalResults } = this.props.results.data;

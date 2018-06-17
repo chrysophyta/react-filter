@@ -3,18 +3,8 @@ import FilterItem from './FilterItem';
 // import FilterItemTime from './FilterItemTime';
 
 export default class Filter extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     sortBy: null,
-  //     from: null,
-  //     to: null
-  //   };
-  // }
   getFilterOptions = (id, e) => {
     this.props.handleFilter(id, e.target.value);
-    console.log(e.target.value, id);
-    // console.log(this.props.handleFilter);
   };
   render() {
     return (
